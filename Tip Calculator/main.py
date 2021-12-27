@@ -11,7 +11,7 @@ class TipCalculator():
     def calcTip(self, bill, num_people, percentage=0):
         tip = bill * (percentage / 100)
         total = bill + tip
-        split_per_person = round(total / num_people, 2)
+        split_per_person = '{:.2f}'.format(total / num_people)
         return split_per_person
 
 
