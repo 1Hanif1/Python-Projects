@@ -8,3 +8,4 @@ This repository contains projects I make using python.
 - Treasure Island
 - Tip Calculator
 - Madlibs generator
+- Rock Paper Scissors
