@@ -1,9 +1,9 @@
+from word_list import words
 import random
 
 
 class Hangman():
-    __words = ['mouse', 'computer', 'bottle',
-               'music', 'games', 'panda']
+    __words = words
     __point = 6
     __stages = ['''
                 +---+
@@ -63,17 +63,18 @@ class Hangman():
                 ''']
 
     def __init__(self) -> None:
-        print('-------------------- Hangman --------------------')
+
         print('''
- _                                             
-| |                                            
-| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
-| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
-| | | | (_| | | | | (_| | | | | | | (_| | | | |
-|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                    __/ |                      
-                   |___/                            
-        \n''')
+                 _                                             
+                | |                                            
+                | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+                | '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+                | | | | (_| | | | | (_| | | | | | | (_| | | | |
+                |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                                    __/ |                      
+                                   |___/                            
+                        \n
+        ''')
         self.__start()
 
     def __start(self) -> None:
@@ -83,7 +84,7 @@ class Hangman():
         self.__printStatus(place_holder)
 
         while True:
-            user_input = input('Guess a letter: ').lower()
+            user_input = input('\nGuess a letter: ').lower()
             place_holder = self.__validate(word, user_input, place_holder)
             self.__printStatus(place_holder)
 
