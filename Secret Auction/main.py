@@ -46,7 +46,7 @@ enter 'yes' if there are. \n- Your bid ammount will be hidden.\n- Next bidder ca
                     continue
         except ValueError:
             print("Please provide a valid bidding ammount!")
-            input("Press ENTER to continue.")
+            input("\nPress ENTER to continue")
             return True
 
     def __auction(self):
