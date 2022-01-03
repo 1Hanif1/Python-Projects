@@ -12,3 +12,4 @@ This repository contains projects I make using python.
 - Password Generator
 - Hangman game
 - Caesar Cipher
+- Secret Auction 
