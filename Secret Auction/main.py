@@ -28,6 +28,10 @@ enter 'yes' if there are. \n- Your bid ammount will be hidden.\n- Next bidder ca
         try:
             name = input("\nEnter your name: ")
             bid = int(input("Enter your bid: ₹"))
+
+            if bid <= 0:
+                raise ValueError
+
             self.__bidders[name] = bid
 
             while True:
@@ -42,6 +46,7 @@ enter 'yes' if there are. \n- Your bid ammount will be hidden.\n- Next bidder ca
                     continue
         except ValueError:
             print("Please provide a valid bidding ammount!")
+            input("Press ENTER to continue.")
             return True
 
     def __auction(self):
