@@ -13,3 +13,4 @@ This repository contains projects I make using python.
 - Hangman game
 - Caesar Cipher
 - Secret Auction 
+- Calculator
