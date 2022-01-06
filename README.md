@@ -15,3 +15,4 @@ This repository contains projects I make using python.
 - Secret Auction 
 - Calculator
 - BlackJack 
+- Guess the number
