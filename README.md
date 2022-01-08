@@ -12,7 +12,8 @@ This repository contains projects I make using python.
 - Password Generator
 - Hangman game
 - Caesar Cipher
-- Secret Auction 
+- Secret Auction
 - Calculator
-- BlackJack 
+- BlackJack
 - Guess the number
+- Higher Lower
