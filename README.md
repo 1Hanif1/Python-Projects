@@ -17,3 +17,4 @@ This repository contains projects I make using python.
 - BlackJack
 - Guess the number
 - Higher Lower
+- Coffee Machine
