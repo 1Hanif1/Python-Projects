@@ -18,3 +18,4 @@ This repository contains projects I make using python.
 - Guess the number
 - Higher Lower
 - Coffee Machine
+- Quiz Game
