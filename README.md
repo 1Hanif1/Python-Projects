@@ -19,3 +19,4 @@ This repository contains projects I make using python.
 - Higher Lower
 - Coffee Machine
 - Quiz Game
+- Hirst Painting Project
