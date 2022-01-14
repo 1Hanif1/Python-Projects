@@ -21,5 +21,4 @@ This repository contains projects I make using python.
 - Quiz Game
 - Hirst Painting Project
 - Etch a sketch
-
-
+- Turtle Race
