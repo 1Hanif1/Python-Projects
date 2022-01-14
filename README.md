@@ -20,3 +20,6 @@ This repository contains projects I make using python.
 - Coffee Machine
 - Quiz Game
 - Hirst Painting Project
+- Etch a sketch
+
+
