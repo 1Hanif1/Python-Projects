@@ -22,3 +22,4 @@ This repository contains projects I make using python.
 - Hirst Painting Project
 - Etch a sketch
 - Turtle Race
+- Snake Game
