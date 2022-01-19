@@ -23,3 +23,4 @@ This repository contains projects I make using python.
 - Etch a sketch
 - Turtle Race
 - Snake Game
+- Pong Game
