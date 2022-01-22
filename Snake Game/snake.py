@@ -61,3 +61,10 @@ class Snake:
     def grow_snake(self):
         last_segment_position = self.segments[-1].position()
         self.add_segment(last_segment_position)
+
+    def reset(self):
+        for segment in self.segments:
+            segment.goto(1000, 1000)
+        self.segments.clear()
+        self.create_snake()
+        self.HEAD = self.segments[0]

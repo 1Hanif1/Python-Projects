@@ -47,15 +47,17 @@ while game_state:
         speed = 0.08
 
     if snake.HEAD.xcor() > 290 or snake.HEAD.xcor() < -290 or snake.HEAD.ycor() > 290 or snake.HEAD.ycor() < -290:
-        game_state = False
+        score.reset()
+        snake.reset()
+        speed = 0.2
 
     for segment in snake.segments[1:]:
         if snake.HEAD.distance(segment) < 10:
-            game_state = False
-            break
+            score.reset()
+            snake.reset()
+            speed = 0.2
 
 # When game is over
-score.game_over()
 
 # Maintains the screen created. Must be last statement in program
 screen.mainloop()
