@@ -25,3 +25,4 @@ This repository contains projects I make using python.
 - Snake Game
 - Pong Game
 - Turtle Crossing Game
+- Mail Merge
