@@ -27,3 +27,4 @@ This repository contains projects I make using python.
 - Turtle Crossing Game
 - Mail Merge
 - Squirrel CSV
+- USA states game
