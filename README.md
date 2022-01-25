@@ -28,3 +28,4 @@ This repository contains projects I make using python.
 - Mail Merge
 - Squirrel CSV
 - USA states game
+- NATO Alphabet phonetics
