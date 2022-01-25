@@ -54,7 +54,8 @@ while game_state:
     if user_input == "Exit":
         missed_states = {
             "States to Learn": [state[0]
-                                for state in state_list if state not in guessed_states]}
+                                for state in state_list if state not in guessed_states]
+        }
 
         PD.DataFrame(missed_states).to_csv("states_to_learn.csv")
 
