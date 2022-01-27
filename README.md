@@ -30,3 +30,4 @@ This repository contains projects I make using python.
 - USA states game
 - NATO Alphabet phonetics
 - Miles to Km converter
+- Pomodoro timer
