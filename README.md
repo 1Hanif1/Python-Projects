@@ -31,3 +31,4 @@ This repository contains projects I make using python.
 - NATO Alphabet phonetics
 - Miles to Km converter
 - Pomodoro timer
+- Password Manager
