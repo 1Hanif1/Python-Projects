@@ -1,8 +1,10 @@
 
+from email import message
 from tkinter import *
 from tkinter import messagebox
 import random
 import pyperclip
+import json
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
@@ -71,14 +73,67 @@ def add_password():
     if not user_input:
         return
 
-    with open("your_credentials.txt", mode="a") as file:
-        file.write(
-            f"website: {website} | username: {username} | password: {password} \n\n")
-        website_input.delete(0, END)
-        username_input.delete(0, END)
+    new_data = {
+        website: {
+            "email": username,
+            "password": password,
+        }
+    }
+
+    try:
+        with open("data.json", mode="r") as file:
+            old_data = json.load(file)
+
+    except FileNotFoundError:
+        with open("data.json", mode="w") as file:
+            json.dump(new_data, file)
+
+    else:
+        if website in old_data:
+
+            user_choice = messagebox.askyesno(
+                title=f"Warning", message=f"{website} credentials already exist\nWant to override them?")
+
+            if not user_choice:
+                return
+
+        old_data.update(new_data)
+        with open("data.json", mode="w") as file:
+            json.dump(old_data, file)
+
+    website_input.delete(0, END)
+    password_input.delete(0, END)
 
     messagebox.showinfo(
-        title="Success", message="Credentials added successfully 🥳")
+        title="Success", message="Credentials dded successfully 🥳")
+
+# ---------------------------- SEARCH PASSWORD ------------------------------- #
+
+
+def search_pass():
+    website = website_input.get()
+
+    if len(website) <= 0:
+        messagebox.showerror(
+            title="Error", message="Please enter some website name")
+        return
+
+    try:
+        with open("data.json", "r") as data_file:
+            data = json.load(data_file)
+            data = data[website]
+
+            data_email = data["email"]
+            data_pass = data["password"]
+    except FileNotFoundError:
+        messagebox.showerror(
+            title="Oops", message="There are no saved passwords ☹️")
+    except KeyError:
+        messagebox.showerror(
+            title="Oops", message="No password found for this website")
+    else:
+        messagebox.showinfo(title=f"{website} credentials",
+                            message=f"Username/Email: {data_email}\nPassword: {data_pass}")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -99,30 +154,32 @@ username_label = Label(text="Email/Username:", font=FONT_NAME)
 password_label = Label(text="Password:", font=FONT_NAME)
 
 # BUTTONS
-gen_pass = Button(text="Generate Password", width=30,
+gen_pass = Button(text="Generate Password",
                   command=generate_password)
 add_pass = Button(text="Add", width=30, command=add_password)
+search_pass = Button(text="Search", width=15, command=search_pass)
 
 # INPUT
 website_input = Entry(width=39)
-username_input = Entry(width=39)
+username_input = Entry(width=58)
 password_input = Entry(width=39)
 
 # Adding widgets to window
-canvas.grid(column=0, row=0, columnspan=2)
+canvas.grid(column=0, row=0, columnspan=3)
 
 website_label.grid(column=0, row=1)
 website_input.grid(column=1, row=1)
 website_input.focus()
 
 username_label.grid(column=0, row=2)
-username_input.grid(column=1, row=2)
+username_input.grid(column=1, row=2, columnspan=2)
 username_input.insert(END, "yourname@example.com")
 
 password_label.grid(column=0, row=3)
 password_input.grid(column=1, row=3)
 
-gen_pass.grid(column=1, row=4)
+gen_pass.grid(column=2, row=3)
 add_pass.grid(column=1, row=5)
+search_pass.grid(column=2, row=1)
 
 window.mainloop()
