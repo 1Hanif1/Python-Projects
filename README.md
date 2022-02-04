@@ -33,3 +33,4 @@ This repository contains projects I make using python.
 - Pomodoro timer
 - Password Manager
 - Flash Card
+- Birthday wish by email
