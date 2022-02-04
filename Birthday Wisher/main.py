@@ -33,22 +33,13 @@ def get_letter(person) -> str:
 
 
 def send_email(letter):
-<<<<<<< HEAD
     MY_EMAIL = ""
     PASSWORD = ""
-=======
-    MY_EMAIL = "nishikatakagisan@gmail.com"
-    PASSWORD = "12345hmb"
->>>>>>> f06136472a1a3449b154343a30f3baa5fc64e91d
     try:
         with smtplib.SMTP("smtp.gmail.com") as mail:
             mail.starttls()
             mail.login(user=MY_EMAIL, password=PASSWORD)
-<<<<<<< HEAD
             mail.sendmail(from_addr=MY_EMAIL, to_addrs="",
-=======
-            mail.sendmail(from_addr=MY_EMAIL, to_addrs="hanifmohammedyt@gmail.com",
->>>>>>> f06136472a1a3449b154343a30f3baa5fc64e91d
                           msg=f"Subject:Happy Birthday ^^\n\n{letter}")
         return True
     except Exception:
