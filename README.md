@@ -34,3 +34,5 @@ This repository contains projects I make using python.
 - Password Manager
 - Flash Card
 - Birthday wish by email
+- ISS Overhead notifier
+- Kanye Quotes App
