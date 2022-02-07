@@ -36,3 +36,4 @@ This repository contains projects I make using python.
 - Birthday wish by email
 - ISS Overhead notifier
 - Kanye Quotes App
+- Anime Quiz App
