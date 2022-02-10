@@ -38,3 +38,4 @@ This repository contains projects I make using python.
 - Kanye Quotes App
 - Anime Quiz App
 - Weather Report SMS
+- BTC Stock Alert
