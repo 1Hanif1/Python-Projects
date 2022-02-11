@@ -39,3 +39,4 @@ This repository contains projects I make using python.
 - Anime Quiz App
 - Weather Report SMS
 - BTC Stock Alert
+- Pixela Habit Tracker
