@@ -40,3 +40,4 @@ This repository contains projects I make using python.
 - Weather Report SMS
 - BTC Stock Alert
 - Pixela Habit Tracker
+- Workout Tracker
