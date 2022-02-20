@@ -41,3 +41,4 @@ This repository contains projects I make using python.
 - BTC Stock Alert
 - Pixela Habit Tracker
 - Workout Tracker
+- Flight Deals
