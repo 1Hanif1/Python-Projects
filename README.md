@@ -42,3 +42,5 @@ This repository contains projects I make using python.
 - Pixela Habit Tracker
 - Workout Tracker
 - Flight Deals
+- 100 Movies to watch - Web Scraping
+- Amazon Price Tracker
