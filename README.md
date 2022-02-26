@@ -45,3 +45,4 @@ This repository contains projects I make using python.
 - 100 Movies to watch - Web Scraping
 - Amazon Price Tracker
 - Cookie Clicker automation
+- Linkedin Job Saver automation
