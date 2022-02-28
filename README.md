@@ -46,3 +46,4 @@ This repository contains projects I make using python.
 - Amazon Price Tracker
 - Cookie Clicker automation
 - Linkedin Job Saver automation
+- Internet speed twitter complain bot
