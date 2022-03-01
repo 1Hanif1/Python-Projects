@@ -76,4 +76,3 @@ bot = InternetSpeedTwitterBot(
     50, 10, "YOUR TWITTER USERNAME", "YOUR TWITTER PASSWORD")
 if bot.get_internet_speed():
     bot.tweet_at_provider()
-# bot.tweet_at_provider()
