@@ -105,7 +105,7 @@ def add_password():
     password_input.delete(0, END)
 
     messagebox.showinfo(
-        title="Success", message="Credentials dded successfully 🥳")
+        title="Success", message="Credentials added successfully 🥳")
 
 # ---------------------------- SEARCH PASSWORD ------------------------------- #
 
