@@ -1,9 +1,7 @@
-from os import environ
 from smtplib import SMTP
 from flask import Flask, request, render_template
-from dotenv import load_dotenv
 from requests import get
-load_dotenv(dotenv_path="./cred.env")
+
 app = Flask(
     __name__,
     static_folder="./static",
@@ -11,8 +9,8 @@ app = Flask(
 )
 
 GLOBAL_DATA = []
-MY_EMAIL = environ["email"]
-PASSWORD = environ["password"]
+MY_EMAIL = 'environ["email"]'
+PASSWORD = 'environ["password"]'
 
 
 @app.route("/")
